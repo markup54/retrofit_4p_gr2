@@ -1,15 +1,17 @@
 package pl.zabrze.zs10.retrofit_gr2_4p;
 
-public class Pytanie {
+import com.google.gson.annotations.SerializedName;
 
-    private String tresc;
+public class Pytanie {
+    @SerializedName("tresc")
+    private String trescPytania;
     private String odp_a;
     private String odp_b;
     private String odp_c;
     private int poprawna;
 
     public Pytanie(String tresc, String odp_a, String odp_b, String odp_c, int poprawna) {
-        this.tresc = tresc;
+        this.trescPytania = tresc;
         this.odp_a = odp_a;
         this.odp_b = odp_b;
         this.odp_c = odp_c;
@@ -17,11 +19,11 @@ public class Pytanie {
     }
 
     public String getTresc() {
-        return tresc;
+        return trescPytania;
     }
 
     public void setTresc(String tresc) {
-        this.tresc = tresc;
+        this.trescPytania = tresc;
     }
 
     public String getOdp_a() {
